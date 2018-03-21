@@ -4,6 +4,6 @@ describe DockingStation do
 
   describe "release_bike"
   it "responds to release_bike method" do
-    expect(DockingStation).to respond_to (:release_bike)
+    expect(DockingStation.new).to respond_to (:release_bike)
   end
 end
