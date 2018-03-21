@@ -18,10 +18,13 @@ describe DockingStation do
    expect{DockingStation.new.release_bike}.to raise_error
  end
 
- describe "dock"
- it "pushes a bike object into the @bike_array" do
-   station.dock(bike1)
-   expect(station.bike_array).to include bike1
+  describe "dock"
+  it "pushes a bike object into the @bike_array" do
+    station.dock(bike1)
+    expect(station.bike_array).to include bike1
+  end
+  it "raises an exception if the dock is full" do
+    expect{station.dock(Bike.new)}.to raise_error  
  end
 
 end
