@@ -10,12 +10,11 @@ class DockingStation
   end
 
   def release_bike
-    Bike.new
+    if @bike_array.count > 0
+      @bike_array.pop
+    else raise "Nope! There are no more bikes here to release."
+    end
   end
-
-  # def see_bikes
-  #   @bike_array
-  # end
 
 
 end
