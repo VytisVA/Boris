@@ -2,8 +2,8 @@ require 'bike'
 
 describe Bike do
 
-  # describe "release_bike"
-  # it "responds to release_bike method" do
-  #   expect(DockingStation.new).to respond_to (:release_bike)
-  # end
+  describe "working?"
+  it "responds to working? method" do
+    expect(Bike.new).to respond_to (:working?)
+  end
 end
